@@ -135,7 +135,7 @@ export default function Location() {
                 src={contact.googleMapsEmbed}
                 width="100%"
                 height="100%"
-                style={{ border: 0, minHeight: "480px" }}
+                style={{ border: 0, minHeight: "280px" }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"

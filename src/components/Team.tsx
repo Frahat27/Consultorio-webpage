@@ -39,7 +39,7 @@ export default function Team() {
 function MemberCard({ member }: { member: (typeof team)[0] }) {
   return (
     <div
-      className="flex w-72 flex-shrink-0 flex-col rounded-2xl border border-neutral-100 bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
+      className="flex w-56 flex-shrink-0 flex-col rounded-2xl border border-neutral-100 bg-white p-5 shadow-sm transition-shadow hover:shadow-md sm:w-72 sm:p-6"
     >
       {/* Photo */}
       <div className="mx-auto mb-4 h-24 w-24 overflow-hidden rounded-full bg-neutral-100 ring-4 ring-brand-50">

@@ -24,12 +24,12 @@ export default function Hero() {
       {/* Contenido centrado */}
       <div className="absolute inset-0 z-10 flex flex-col items-center justify-center px-4 text-center">
         {/* Nombre */}
-        <h1 className="text-5xl font-bold tracking-tight text-white sm:text-6xl lg:text-7xl">
+        <h1 className="text-3xl font-bold tracking-tight text-white sm:text-5xl lg:text-7xl">
           Hat Dental
         </h1>
 
         {/* Subtítulo */}
-        <p className="mt-5 max-w-xl text-lg font-light italic tracking-wide text-white/90 sm:text-xl">
+        <p className="mt-5 max-w-xl text-base font-light italic tracking-wide text-white/90 sm:text-lg sm:text-xl">
           Cuidamos tu sonrisa con un enfoque moderno y personalizado para toda tu familia
         </p>
 

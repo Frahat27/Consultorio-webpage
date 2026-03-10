@@ -34,7 +34,7 @@ export default function Reviews() {
         <div className="mt-14 grid grid-cols-1 items-center gap-8 lg:grid-cols-4">
 
           {/* Panel izquierdo – sin borde, solo contenido flotante */}
-          <div className="flex flex-col items-center justify-center text-center lg:col-span-1" style={{ minHeight: "340px" }}>
+          <div className="flex flex-col items-center justify-center text-center lg:col-span-1">
             <div className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-full border border-neutral-200 bg-white shadow-sm">
               <Image
                 src="/logo-stacked.png"
@@ -84,10 +84,14 @@ export default function Reviews() {
 
           {/* Carrusel */}
           <div className="relative lg:col-span-3">
-            <div className="grid grid-cols-3 gap-4 px-10">
+            <div className="grid grid-cols-1 gap-4 px-8 sm:grid-cols-3">
               {[0, 1, 2].map((offset) => {
                 const review = reviews[(current + offset) % reviews.length];
-                return <ReviewCard key={`${current}-${offset}`} review={review} />;
+                return (
+                  <div key={`${current}-${offset}`} className={offset > 0 ? "hidden sm:block" : ""}>
+                    <ReviewCard review={review} />
+                  </div>
+                );
               })}
             </div>
 
@@ -133,7 +137,7 @@ function ReviewCard({ review }: { review: (typeof reviews)[0] }) {
   return (
     <div
       className="relative flex flex-col rounded-2xl bg-white p-5"
-      style={{ minHeight: "340px", boxShadow: "0 1px 4px rgba(0,0,0,0.07)", border: "1px solid #e5e7eb" }}
+      style={{ boxShadow: "0 1px 4px rgba(0,0,0,0.07)", border: "1px solid #e5e7eb" }}
     >
       {/* Google G – top right */}
       <div className="absolute right-4 top-4">
