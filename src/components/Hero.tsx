@@ -25,7 +25,7 @@ export default function Hero() {
       <div className="absolute inset-0 z-10 flex flex-col items-center justify-center px-4 text-center">
         {/* Nombre */}
         <h1 className="text-3xl font-bold tracking-tight text-white sm:text-5xl lg:text-7xl">
-          Hat Dental
+          Dental Hat
         </h1>
 
         {/* Subtítulo */}
