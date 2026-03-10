@@ -18,7 +18,7 @@ export const team: TeamMember[] = [
       "Blanqueamiento dental profesional",
       "Coordinación y planificación de tratamientos integrales",
     ],
-    image: "/team/cynthia-real.jpg",
+    image: "/team/Cynthia.png",
   },
   {
     name: "Dra. Daiana Perez",
@@ -29,7 +29,7 @@ export const team: TeamMember[] = [
       "Extracciones simples y complejas",
       "Técnica mínimamente invasiva",
     ],
-    image: "/team/daiana-perez.png",
+    image: "/team/Daiana_Perez.jpg",
   },
   {
     name: "Dr. Diego Figueiras",
@@ -40,7 +40,7 @@ export const team: TeamMember[] = [
       "Planificación digital 3D",
       "Rehabilitación sobre implantes",
     ],
-    image: "/team/diego-figueiras.png",
+    image: "/team/Diego_figueiras_2.jpg",
   },
   {
     name: "Dra. Ana Miño",
@@ -73,6 +73,6 @@ export const team: TeamMember[] = [
       "Gestión de turnos y seguimiento",
       "Atención cálida y organizada",
     ],
-    image: "/team/asistente-recepcion.jpg",
+    image: "/team/Edymar_Falcon.jpg",
   },
 ];
