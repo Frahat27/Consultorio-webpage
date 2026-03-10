@@ -45,7 +45,7 @@ export default function Reviews() {
               />
             </div>
             <p className="mt-3 text-base font-bold leading-snug text-neutral-800">
-              CYNTHIAH
+              Dental Hat
               <br />
               <span className="font-normal text-neutral-500 text-sm">
                 Odontología y Ortodoncia

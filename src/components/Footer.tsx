@@ -121,7 +121,7 @@ export default function Footer() {
 
         <div className="mt-12 border-t border-neutral-800 pt-8 text-center text-xs text-neutral-500">
           <p>
-            &copy; {new Date().getFullYear()} CYNTHIAH – Centro Odontológico
+            &copy; {new Date().getFullYear()} Dental Hat – Centro Odontológico
             Integral. Todos los derechos reservados.
           </p>
         </div>

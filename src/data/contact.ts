@@ -3,7 +3,7 @@ export const contact = {
   phone: "5491141657011",
   whatsapp: "5491141657011",
   whatsappMessage: "Hola, quiero consultar por un turno en CYNTHIAH.",
-  email: "Hatdental@gmail.com",
+  email: "DentalHat@gmail.com",
   address: "Virrey del Pino 4191, 3C",
   neighborhood: "Belgrano",
   city: "CABA",
