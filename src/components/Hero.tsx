@@ -8,13 +8,23 @@ export default function Hero() {
       id="inicio"
       className="relative overflow-hidden"
     >
-      {/* Background photo — full width, height auto */}
+      {/* Mobile photo */}
+      <Image
+        src="/consultorio/Consultorio 1.jpg"
+        alt="Dental Hat – consultorio"
+        width={800}
+        height={1000}
+        className="block w-full h-auto sm:hidden"
+        priority
+      />
+
+      {/* Desktop photo */}
       <Image
         src="/consultorio/equipo-banner-2.png"
         alt="Equipo Hat Dental en el consultorio"
         width={1920}
         height={800}
-        className="w-full h-auto"
+        className="hidden w-full h-auto sm:block"
         priority
       />
 
