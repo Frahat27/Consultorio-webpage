@@ -1,13 +1,21 @@
-# CYNTHIAH – Centro Odontológico Integral
+# Dental Hat – Odontología y Ortodoncia
 
-Sitio web institucional one-page para CYNTHIAH, centro odontológico integral en Belgrano, CABA.
+Sitio web institucional one-page para **Dental Hat**, centro odontológico en Belgrano, CABA.
+
+🌐 **URL:** https://dentalhat.up.railway.app
+
+---
 
 ## Stack
 
-- **Next.js 16** (App Router) + TypeScript
+- **Next.js** (App Router) + TypeScript
 - **Tailwind CSS 4**
+- Deploy en **Railway**
 - SEO técnico completo (metadata, OpenGraph, JSON-LD, sitemap, robots)
+- Google Analytics (G-YP2Q4JWVV7)
 - Mobile-first, accesible, performante
+
+---
 
 ## Correr en local
 
@@ -18,12 +26,14 @@ npm run dev
 
 Abrir [http://localhost:3000](http://localhost:3000).
 
+---
+
 ## Estructura del proyecto
 
 ```
 src/
 ├── app/
-│   ├── layout.tsx          # Layout global (header, footer, JSON-LD)
+│   ├── layout.tsx          # Layout global (header, footer, JSON-LD, GA)
 │   ├── page.tsx            # Home one-page
 │   ├── globals.css         # Estilos base + paleta de colores
 │   ├── robots.ts           # robots.txt
@@ -31,88 +41,82 @@ src/
 │   ├── privacidad/page.tsx # Política de privacidad
 │   └── terminos/page.tsx   # Términos y condiciones
 ├── components/
-│   ├── Header.tsx          # Header sticky con nav
-│   ├── Hero.tsx            # Sección hero
-│   ├── Trust.tsx           # 3 pilares de confianza
-│   ├── Treatments.tsx      # Tratamientos (accordion)
-│   ├── Prices.tsx          # Precios orientativos
-│   ├── Team.tsx            # Equipo / Quiénes somos
-│   ├── Reviews.tsx         # Reseñas de Google
-│   ├── Location.tsx        # Ubicación y mapa
-│   ├── FAQ.tsx             # Preguntas frecuentes
-│   ├── Footer.tsx          # Footer con contacto
-│   └── WhatsAppButton.tsx  # Botón flotante de WhatsApp
+│   ├── Header.tsx          # Header sticky con nav y menú mobile
+│   ├── Hero.tsx            # Hero con foto diferente en mobile/desktop
+│   ├── Trust.tsx           # 4 pilares de confianza
+│   ├── Treatments.tsx      # Tratamientos accordion + CTA WhatsApp
+│   ├── Team.tsx            # Carrusel del equipo profesional
+│   ├── Reviews.tsx         # Carrusel de reseñas de Google
+│   ├── Location.tsx        # Ubicación, horarios y mapa
+│   ├── FAQ.tsx             # Preguntas frecuentes + schema FAQPage
+│   ├── Footer.tsx          # Footer con contacto e Instagram
+│   ├── WhatsAppButton.tsx  # Botón flotante de WhatsApp
+│   └── GoogleAnalytics.tsx # GA4 via variable de entorno
 ├── data/
-│   ├── contact.ts          # Datos de contacto
+│   ├── contact.ts          # Datos de contacto, horarios, áreas
 │   ├── faq.ts              # Preguntas frecuentes
-│   ├── prices.ts           # Precios orientativos
-│   ├── reviews.ts          # Reseñas destacadas
-│   ├── team.ts             # Equipo profesional
-│   └── treatments.ts       # Tratamientos
+│   ├── prices.ts           # Precios (sección oculta, disponible)
+│   ├── reviews.ts          # Reseñas destacadas + config rating
+│   ├── team.ts             # Equipo profesional con fotos
+│   └── treatments.ts       # Tratamientos con descripción y especialista
 └── lib/
-    └── seo.ts              # Metadata, JSON-LD, helpers SEO
+    └── seo.ts              # Metadata, JSON-LD Dentist + Person + FAQ
 ```
 
-## Checklist de pendientes
+---
 
-Buscar `[PENDIENTE` en el código para encontrar todos los placeholders a completar:
+## Variables de entorno (Railway)
 
-### Datos de contacto (`src/data/contact.ts`)
-- [ ] Número de WhatsApp (con código de país)
-- [ ] Número de teléfono
-- [ ] Email
-- [ ] Dirección exacta
-- [ ] Horarios de atención
-- [ ] URL del iframe de Google Maps (embed)
-- [ ] Link directo a Google Maps
+| Variable | Valor |
+|---|---|
+| `NEXT_PUBLIC_GA_ID` | `G-YP2Q4JWVV7` |
 
-### Equipo (`src/data/team.ts`)
-- [ ] Nombre y datos de cada profesional
-- [ ] Foto de cada profesional (colocar en `public/team/`)
-- [ ] Formación y especialización de cada uno
+---
 
-### Precios (`src/data/prices.ts`)
-- [ ] Completar rangos de precios para cada tratamiento
-- [ ] Actualizar fecha de última actualización
+## SEO implementado
 
-### Reseñas (`src/data/reviews.ts`)
-- [ ] Link a Google Maps del consultorio
-- [ ] Place ID de Google
-- [ ] Reseñas reales (reemplazar las de ejemplo)
-- [ ] Verificar cantidad total y rating promedio
+- ✅ JSON-LD `Dentist` con dirección, coordenadas, horarios y rating
+- ✅ JSON-LD `Person` por cada especialista del equipo
+- ✅ JSON-LD `FAQPage` para rich snippets en Google
+- ✅ JSON-LD `Review` + `AggregateRating` para estrellas en resultados
+- ✅ OpenGraph + Twitter Card con imagen de preview
+- ✅ Sitemap y robots.txt
+- ✅ `lang="es-AR"` para señales locales
+- ✅ Imágenes optimizadas automáticamente en AVIF/WebP
+- ✅ Meta description con keyword + CTA (155 chars)
+- ✅ Google Analytics activo
+- ✅ Registrado en Doctoralia
 
-### SEO (`src/lib/seo.ts`)
-- [ ] Confirmar dominio definitivo (aparece como `cynthiah.com.ar`)
-- [ ] Completar datos de dirección en JSON-LD
-- [ ] Coordenadas geográficas (latitud/longitud)
-- [ ] Crear imagen OG (`public/og-image.jpg`, 1200x630px)
+---
 
-### Imágenes
-- [ ] Fotos del equipo en `public/team/`
-- [ ] Imagen OG en `public/og-image.jpg`
-- [ ] Favicon personalizado
+## Paleta de colores
 
-### Legal
-- [ ] Revisar textos de privacidad y términos
-- [ ] Actualizar fechas de "última actualización"
+| Token | Hex | Uso |
+|---|---|---|
+| `brand-600` | `#4a8fbf` | Botones, íconos, acentos |
+| `brand-50` | `#eaf4fb` | Fondos suaves |
+| `amber-400` | `#fbbf24` | CTA principal, estrellas |
+| `neutral-900` | `#0f172a` | Textos principales |
 
-## Deploy en Vercel
+---
 
-1. Subir el repo a GitHub
-2. Ir a [vercel.com](https://vercel.com) y crear un nuevo proyecto
-3. Conectar el repositorio de GitHub
-4. Vercel detecta Next.js automáticamente; deploy con un click
-5. Configurar el dominio personalizado en Settings > Domains
+## Pendientes futuros
+
+| Tarea | Detalle |
+|---|---|
+| Dominio propio | Cambiar `SITE_URL` en `src/lib/seo.ts` |
+| Reseñas reales | Reemplazar array en `src/data/reviews.ts` |
+| Imagen OG real | `public/og-image.jpg` 1200×630px |
+| Favicon personalizado | Reemplazar `src/app/favicon.ico` |
+
+---
+
+## Deploy
+
+El sitio se despliega automáticamente en Railway cada vez que se hace push a `main`.
 
 ```bash
-# O desde la CLI:
-npx vercel
+git add .
+git commit -m "descripción del cambio"
+git push origin main
 ```
-
-## Notas de diseño
-
-- Paleta verde-menta (`brand`) + tonos cálidos (`warm`) + neutros
-- Tipografía: Inter (Google Fonts, optimizada con next/font)
-- Sin librerías de UI externas
-- Animaciones mínimas (hover transitions, accordion)
-- Diseño responsivo mobile-first
