@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { defaultMetadata, generateJsonLd } from "@/lib/seo";
+import { defaultMetadata, generateJsonLd, generateTeamJsonLd } from "@/lib/seo";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -21,6 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const jsonLd = generateJsonLd();
+  const teamJsonLd = generateTeamJsonLd();
 
   return (
     <html lang="es-AR" className={inter.variable}>
@@ -28,6 +29,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(teamJsonLd) }}
         />
       </head>
       <body className="antialiased">

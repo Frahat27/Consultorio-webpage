@@ -9,7 +9,7 @@ export const defaultMetadata: Metadata = {
     template: "%s | Dental Hat",
   },
   description:
-    "Centro odontológico en Belgrano con especialistas en implantes, ortodoncia, estética dental y odontología general. Atención personalizada y diagnóstico honesto. Coordiná tu turno por WhatsApp.",
+    "Dentista en Belgrano, CABA. Especialistas en implantes, ortodoncia y estética dental. Atención personalizada y diagnóstico honesto. ¡Coordiná tu turno hoy!",
   keywords: [
     "dentista belgrano",
     "odontólogo belgrano",
@@ -66,6 +66,51 @@ export const defaultMetadata: Metadata = {
     },
   },
 };
+
+export function generateTeamJsonLd() {
+  return [
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      name: "Dra. Cynthia Hatzerian",
+      jobTitle: "Directora clínica – Odontología general y Ortodoncia",
+      worksFor: { "@type": "Dentist", name: "Dental Hat – Odontología y Ortodoncia" },
+      medicalSpecialty: ["Odontología general", "Ortodoncia", "Estética dental"],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      name: "Dra. Daiana Perez",
+      jobTitle: "Especialista en Cirugía y Extracciones",
+      worksFor: { "@type": "Dentist", name: "Dental Hat – Odontología y Ortodoncia" },
+      medicalSpecialty: ["Cirugía bucomaxilofacial", "Extracciones"],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      name: "Dr. Diego Figueiras",
+      jobTitle: "Especialista en Implantología",
+      worksFor: { "@type": "Dentist", name: "Dental Hat – Odontología y Ortodoncia" },
+      medicalSpecialty: ["Implantología dental"],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      name: "Dra. Ana Miño",
+      jobTitle: "Especialista en Odontopediatría",
+      worksFor: { "@type": "Dentist", name: "Dental Hat – Odontología y Ortodoncia" },
+      medicalSpecialty: ["Odontología general", "Odontopediatría"],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      name: "Dr. Ignacio Fernandez",
+      jobTitle: "Especialista en Endodoncia",
+      worksFor: { "@type": "Dentist", name: "Dental Hat – Odontología y Ortodoncia" },
+      medicalSpecialty: ["Endodoncia"],
+    },
+  ];
+}
 
 export function generateJsonLd() {
   return {
