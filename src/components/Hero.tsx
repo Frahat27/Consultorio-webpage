@@ -11,7 +11,7 @@ export default function Hero() {
       {/* Mobile photo */}
       <Image
         src="/consultorio/Consultorio 1.jpg"
-        alt="Dental Hat – consultorio"
+        alt="Consultorio odontológico Dental Hat en Belgrano, CABA – sala de atención moderna"
         width={800}
         height={1000}
         className="block w-full h-auto sm:hidden"
@@ -21,7 +21,7 @@ export default function Hero() {
       {/* Desktop photo */}
       <Image
         src="/consultorio/equipo-banner-2.png"
-        alt="Equipo Hat Dental en el consultorio"
+        alt="Equipo de especialistas de Dental Hat – Odontología y Ortodoncia en Belgrano, CABA"
         width={1920}
         height={800}
         className="hidden w-full h-auto sm:block"

@@ -4,6 +4,29 @@ import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { reviews, reviewsConfig } from "@/data/reviews";
 
+const reviewsJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "Dental Hat – Odontología y Ortodoncia",
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: reviewsConfig.averageRating,
+    reviewCount: reviewsConfig.totalReviews,
+    bestRating: 5,
+  },
+  review: reviews.map((r) => ({
+    "@type": "Review",
+    author: { "@type": "Person", name: r.author },
+    reviewRating: {
+      "@type": "Rating",
+      ratingValue: r.rating,
+      bestRating: 5,
+    },
+    reviewBody: r.text,
+    datePublished: r.date,
+  })),
+};
+
 export default function Reviews() {
   const [current, setCurrent] = useState(0);
   const max = reviews.length - 3;
@@ -21,6 +44,10 @@ export default function Reviews() {
 
   return (
     <section id="resenas" className="bg-neutral-50 py-20 lg:py-28">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewsJsonLd) }}
+      />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
         {/* Título con línea decorativa */}
