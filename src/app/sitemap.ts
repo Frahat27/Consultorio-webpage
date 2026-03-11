@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://cynthiah.vercel.app"; // [PENDIENTE: confirmar dominio]
+  const baseUrl = "https://dentalhat.up.railway.app";
 
   return [
     {

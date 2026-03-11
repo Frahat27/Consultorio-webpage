@@ -36,6 +36,9 @@ export default function Hero() {
         {/* Nombre */}
         <h1 className="text-3xl font-bold tracking-tight text-white sm:text-5xl lg:text-7xl">
           Dental Hat
+          <span className="block text-lg font-normal tracking-normal text-white/80 sm:text-2xl lg:text-3xl">
+            Odontología y Ortodoncia en Belgrano
+          </span>
         </h1>
 
         {/* Subtítulo */}

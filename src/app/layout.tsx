@@ -22,7 +22,7 @@ export default function RootLayout({
   const jsonLd = generateJsonLd();
 
   return (
-    <html lang="es" className={inter.variable}>
+    <html lang="es-AR" className={inter.variable}>
       <head>
         <script
           type="application/ld+json"

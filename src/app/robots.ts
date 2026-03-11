@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: [],
     },
-    sitemap: "https://cynthiah.vercel.app/sitemap.xml", // [PENDIENTE: confirmar dominio]
+    sitemap: "https://dentalhat.up.railway.app/sitemap.xml",
   };
 }
